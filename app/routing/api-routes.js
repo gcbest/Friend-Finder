@@ -23,9 +23,31 @@ module.exports = function (app) {
 		// Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
 		// It will do this by sending out the value "true" have a table
 		// if (friendsList.length >= 0) {
+			var currentUserScores = req.body.scores;
+			var lowestDifference = 100;
+			var difference = 0;
+			var bestMatch = friendsList[0];
+			for(var i = 0; i < friendsList.length; i++) {
+				var possibleMatchScores = friendsList[i].scores;
+				for (var j = 0; j < possibleMatchScores.length; j++){
+					difference += Math.abs(currentUserScores[j] - possibleMatchScores[j]);
+					console.log("Possible match scorces: " + possibleMatchScores[j]);
+					console.log("Difference: " + difference);
+				}
+
+				if (difference <= lowestDifference) {
+						lowestDifference = difference;
+						bestMatch = friendsList[i];
+					}
+
+				difference = 0;
+			}
+
+
 			friendsList.push(req.body);
-			res.json(true); // KEY LINE
-		// }
+
+			
+			res.json(bestMatch); // KEY LINE
 	});
 
 	// ---------------------------------------------------------------------------

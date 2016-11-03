@@ -18,6 +18,20 @@
 </head>
 <body>
 
+	<!-- Modal Trigger -->
+	<a class="waves-effect waves-light btn" href="#modal1">Modal</a>
+
+	<!-- Modal Structure -->
+ 	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>Modal Header</h4>
+			<p>A bunch of text</p>
+    	</div>
+	    <div class="modal-footer">
+			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+	    </div>
+	</div>
+
 	<div class="container">
 		<h2>Survey Questions</h2>
 		<hr>
@@ -207,7 +221,7 @@
 		<!-- Submit Button -->
 		<div class="row">
 			<div class="col-12">
-				<button class="btn waves-effect waves-light btn-large" id="submit" type="submit" name="action" style="display: block; width: 100%">Submit
+				<button class="btn waves-effect waves-light btn-large" id="submit" type="submit" data-target="modal1" name="action" style="display: block; width: 100%">Submit
 		    	<i class="material-icons right">send</i>
 		 		</button>
 		 	</div>
@@ -249,26 +263,23 @@
 	        		name: $('#Name').val().trim(),
 	        		photo: $('#photo').val().trim(),
 	        		scores: [
-	        		$('#q0').val(),
-	        		$('#q1').val(),
-	        		$('#q2').val(),
-	        		$('#q3').val(),
-	        		$('#q4').val(),
-	        		$('#q5').val(),
-	        		$('#q6').val(),
-	        		$('#q7').val(),
-	        		$('#q8').val(),
-	        		$('#q9').val(),
+	        		parseInt($('#q0').val()),
+	        		parseInt($('#q1').val()),
+	        		parseInt($('#q2').val()),
+	        		parseInt($('#q3').val()),
+	        		parseInt($('#q4').val()),
+	        		parseInt($('#q5').val()),
+	        		parseInt($('#q6').val()),
+	        		parseInt($('#q7').val()),
+	        		parseInt($('#q8').val()),
+	        		parseInt($('#q9').val()),
 	        		]
 	        	}
 
 	        	var currentURL = window.location.origin;
 	        	$.post(currentURL + "/api/friends", newFriend, function(data) {
-	        		if(data == true){
-		                alert("Yay! You are officially booked!")
-		                console.log(newFriend);
-		                console.log(data);
-		            }	
+	        		alert("It is working");
+		            console.log(data);
 	        	});
 	    	});
 	    });
