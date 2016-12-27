@@ -1,36 +1,43 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-
-	<title>Friend Finder</title>
-	 <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Friend Finder</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+    #friend {
+        float: left;
+    }
+    
+    #search {
+        float: right;
+    }
+    body {
+    	background-color: #88BDF5;
+    }
+    </style>
 </head>
 
 <body>
-
-	<div class="container">
-		<div class="row">
-	    	<h1 class="center text">Friend Finder</h1><br>
-	    	<h2>Answer a few basic questions.</h2>
-	    	<h2>Then find the friend with the greatest compatibility.</h2><br>
-	    	<a class="waves-effect waves-light btn-large" href="/survey"><i class="material-icons dp48">view_list</i> Go to Survey</a>
-    	</div><br>
-		<div class="row">
-			<a href="https://the-friend-finder.herokuapp.com/api/friends">API Friends List</a> |
-			<a href="https://github.com/gcbest/Friend-Finder">GitHub Repo</a>
-		</div>
-
+    <div class="container">
+        <div class="row">
+            <h1 class="center text"><i class="medium material-icons" id="friend">perm_identity</i>Friend Finder<i class="medium material-icons" id="search">search</i></h1>
+            <h3>Answer a few basic questions.</h3>
+            <h3>Then find the friend with the greatest compatibility.</h3>
+            <br>
+            <a class="waves-effect waves-light btn-large" href="/survey"><i class="material-icons dp48">view_list</i> Go to Survey</a>
+        </div>
+        <br>
+        <div class="row">
+            <a href="https://the-friend-finder.herokuapp.com/api/friends">API Friends List</a> |
+            <a href="https://github.com/gcbest/Friend-Finder">GitHub Repo</a>
+        </div>
     </div>
-	
-
 </body>
+
 </html>
