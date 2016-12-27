@@ -12,10 +12,17 @@ You can test a fully working live demo at
 
 [https://the-friend-finder.herokuapp.com](https://the-friend-finder.herokuapp.com)
 
+
+### Local Demo
+1. first clone the application to your local file
+`git clone friend-finder`
+2. install the packages with npm `npm install`
+3. run the server with `node server.js `
+4. go to `www.localhost/3000`
+
 ## Technology Used
  ![](http://williamavasquez.herokuapp.com/img/js.png)
  ![](http://williamavasquez.herokuapp.com/img/node.png)
- ![](http://williamavasquez.herokuapp.com/img/mysql.png)
 
 ## License
 This project is licensed under the terms of the **MIT** license.
