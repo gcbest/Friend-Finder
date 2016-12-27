@@ -1,5 +1,22 @@
 # Friend-Finder
 
-hosted at https://the-friend-finder.herokuapp.com
-
+## Summary
 This is a compatibility-based "FriendFinder" application. This full-stack site will take in results users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
+
+![image Description]()
+
+## How to use my App
+
+### Online Demo
+You can test a fully working live demo at
+
+[https://the-friend-finder.herokuapp.com](https://the-friend-finder.herokuapp.com)
+
+## Technology Used
+ ![](http://williamavasquez.herokuapp.com/img/js.png)
+ ![](http://williamavasquez.herokuapp.com/img/node.png)
+ ![](http://williamavasquez.herokuapp.com/img/mysql.png)
+
+## License
+This project is licensed under the terms of the **MIT** license.
+
