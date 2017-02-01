@@ -17,6 +17,8 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 
+// Testing git commit -a
+
 // ================================================================================
 // ROUTER
 // The below points our server to a series of "route" files.
